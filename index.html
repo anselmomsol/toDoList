@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Advance Todo List</title>
+	<meta name="viewport" content="width=device-width , initial-scale=1">
+	<link rel="stylesheet" href="assets/css/styles.css">
+	<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+	<div class="main">
+		<h1 id="default_text">No ingreso ninguna tarea&nbsp;<i class='bx bx-task-x'></i></h1>
+		<h1><i class='bx bx-bookmark-heart'></i>Mi Día</h1>
+		<h1 id="total_task"><i class='bx bxs-badge-check''></i>&nbsp;6</h1>
+
+		<div class="display_task">
+			<div class="task" id="todo_1">
+				<h2>Tarea 1</h2>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A aliquam provident inventore eaque tenetur tempore qui atque. Voluptatem quas nemo aliquam alias minima laudantium provident quisquam temporibus consectetur ducimus! Illum.</p>
+				<span class="delete_todo">X</span>
+			</div>
+
+			<div class="task" id="todo_2">
+				<h2>Tarea 2</h2>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur facere similique voluptatem quam cupiditate quisquam aspernatur aliquid nobis? Repudiandae accusantium nobis in quos fugit natus earum praesentium laudantium illo iusto.</p>
+				<span class="delete_todo">X</span>
+			</div>
+
+			<div class="task" id="todo_3">
+				<h2>Tarea 3</h2>
+				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem debitis enim delectus doloremque cupiditate reprehenderit sapiente id veniam repellat! Sit, nostrum rerum quibusdam exercitationem amet voluptas quis culpa nesciunt labore.</p>
+				<span class="delete_todo">X</span>
+			</div>
+
+			<div class="task" id="todo_4">
+				<h2>Tarea 4</h2>
+				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde, mollitia. Illum non consequuntur sit sapiente ratione nesciunt provident corporis dolorem modi eos natus, id praesentium dolor cumque repellat. Optio, ea?</p>
+				<span class="delete_todo">X</span>
+			</div>
+
+
+			<div class="task" id="todo_5">
+				<h2>Tarea 5</h2>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, incidunt molestiae et cum illum velit iusto sit nisi magni pariatur voluptatibus sapiente iste necessitatibus unde nam natus iure deleniti amet?</p>
+				<span class="delete_todo">X</span>
+			</div>
+
+			<div class="task" id="todo_6">
+				<h2>Tarea 6</h2>
+				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus distinctio dicta alias, nihil sunt dolorem non. Adipisci necessitatibus eligendi fugiat corporis qui, repellendus provident illum inventore reiciendis ipsam iure unde!</p>
+				<span class="delete_todo">X</span>
+			</div>
+
+		</div>
+        
+        <button id="floating_btn"><i class='bx bx-plus'></i></button>
+		<div class="floating_menu">
+			<button id="hide_menu"><i class='bx bx-chevron-down'></i></button>
+
+			<form class="form">
+				<input type="text" name="task_title" placeholder="Ingrese tarea a realizar." autocomplete="off">
+				<input type="text" name="task_description" placeholder="Ingrese descripción." autocomplete="off">
+				<div class="buttons">
+				   <button id="clear_text_box"><i class='button-float bx bx-no-entry'></i></button>
+				   <button id="add_todo"><i class='button-float bx bx-check-circle'></i></button>
+				</div>
+
+			</form>
+		</div>
+	</div>
+	
+	<script src="assets/js/script.js"></script>
+</body>
+</html>

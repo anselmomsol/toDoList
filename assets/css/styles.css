@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Dancing Script', sans-serif;
+}
+body{
+	display: grid;
+	place-items: center;
+	min-height: 100vh;
+	background: rgba(187, 67, 67, 0.2);
+}
+.main{
+	position: relative;
+	width: 80%;
+	height: 450px;
+	padding: 15px;
+	background: #fff;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0.1px 3px 30px 1.5px rgba(0,0,0,0.5);
+}
+.main h1{
+	margin-bottom: 1em;
+}
+.main #default_text{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	opacity: 0;
+	transform: translate(-50%, -50%);
+}
+.main #total_task{
+	position: absolute;
+	right: 20px;
+	top: 10px;
+}
+.floating_menu{
+	position: absolute;
+	left: 15px;
+	bottom: -100%;
+	min-height: 30%;
+	width: 31%;
+	padding: 10px;
+	transition: 0.5s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	border-radius: 20px 20px 0 0;
+	box-shadow: 0.1px 3px 30px 1.5px rgba(0,0,0,0.5);
+	background: linear-gradient(to right,#e7971e, #f5bfa0);
+}
+#hide_menu{
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    color: #fff;
+	font-size: 2.5em;
+}
+.floating_menu_active{
+	bottom: 0%;
+}
+#floating_btn{
+    position: absolute;
+    padding-top: 5px;
+    bottom: 30px;
+    right: 50px;
+    height: 50px;
+    width: 50px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #f3773e;
+    border-radius: 70%;
+    font-size: 1.5em;
+	color: #fff;
+    box-shadow: 0.1px 3px 18px 1.5px rgba(0,0,0,0.2);
+}
+
+/*form part*/
+form{
+	height: 60%;
+	width: 95%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+form input{
+	width: 100%;
+	padding: 20px;
+    border: none;
+	outline: none;
+	font-size: 1.5em;
+	border-radius: 10px;
+	margin-bottom: 15px;
+}
+.buttons{
+	width: 100%;
+	text-align: right;
+}
+.buttons button{
+	width: 45px;
+	border: none;
+    padding-top: 5px;
+	outline: none;
+	cursor: pointer;
+	color: #fff;
+	font-size: 2em;
+	border-radius: 10px;
+	box-shadow: 0.1px 3px 12px 1.5px rgba(0,0,0,0.2);
+}
+
+#add_todo{
+    background: #e2c026;
+    margin-left: 10px;
+}
+#clear_text_box{
+	background: #EC7063;
+}
+
+/*task list*/
+.display_task{
+	display: grid;
+	grid-template-columns: repeat(3, 32%);
+    grid-template-rows: repeat(2, 130px);
+    grid-gap: 10px;
+    max-height: 85%;
+	overflow: scroll;
+	overflow-x: hidden;
+}
+.task{
+	position: relative;
+	padding: 10px;
+	border-radius: 10px;
+	background: linear-gradient(to right,#cf5151, #f09a9a);
+}
+.task .delete_todo{
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	cursor: pointer;
+	font-size: 1.2em;
+	color: rgb(228, 190, 225);
+	padding: 0 6px;
+	border-radius: 5px;
+	background: #EC7063;
+}
+.task h2,p{
+	color: #fff;
+}
+.task h2{
+	margin-bottom: 10px;
+}
+
+
+@media (max-width: 700px) {
+	.main{
+		height: 90vh;
+	}
+    .display_task{
+	    grid-template-columns: 100%;
+	}
+	.floating_menu{
+		width: 95%;
+		left: 50%;
+		transform: translateX(-50%);   
+	}
+}
